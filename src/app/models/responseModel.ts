@@ -1,5 +1,5 @@
 export interface ResponseModel{
-    success:boolean;
-    massage:string;
+     success:boolean;
+     massage:string;
 
 }

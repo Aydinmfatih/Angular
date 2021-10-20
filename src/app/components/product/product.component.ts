@@ -11,6 +11,7 @@ import { HttpClient } from '@angular/common/http';
 export class ProductComponent implements OnInit {
   products: ToDos[] = [];
   apiUrl = 'https://jsonplaceholder.typicode.com/todos';
+  test = "deneme";
   // productResponseModel: ProductResponseModel = {
   //   data: this.products,
   //   massage: '',
@@ -24,10 +25,10 @@ export class ProductComponent implements OnInit {
   }
 
   getToDos() {
-    this.httpClient
-      .get<ProductResponseModel>(this.apiUrl)
-      .subscribe((response) => {
-        this.products = response.data;
-      });
+    this.httpClient.get<any>(this.apiUrl).subscribe((response) => {
+      console.log(response);
+
+      this.products = response;
+    });
   }
 }
